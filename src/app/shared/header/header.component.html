@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-mini-fab color="warn" [matMenuTriggerFor]="dashmenu">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <mat-icon class="example-icon">{{iconTitle}}</mat-icon>
+    <span>{{pageTitle}}</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon icon-menu" [matMenuTriggerFor]="helpmenu" matTooltip="Help">live_help</mat-icon>
+    <mat-icon class="example-icon" matTooltip="Email">email</mat-icon>
+    <mat-icon class="example-icon" matTooltip="more">more_vert</mat-icon>
+
+    <mat-menu #helpmenu="matMenu">
+      {{helpTitle}}
+    </mat-menu>
+    <mat-menu #dashmenu="matMenu">
+      <button class="mat-menu-item"><mat-icon matTooltip="Dashboard">dashboard</mat-icon>Dashboard</button>
+      <button class="mat-menu-item"><mat-icon matTooltip="Email">email</mat-icon>Email</button>
+      <button class="mat-menu-item"><mat-icon matTooltip="Info">info</mat-icon>About</button>
+      <button class="mat-menu-item"><mat-icon matTooltip="Settings">settings_applications</mat-icon>Settings</button>
+    </mat-menu>
+  </mat-toolbar-row>
