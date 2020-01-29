@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { EnviromentService } from '../../service/enviroment.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,9 +13,17 @@ export class HeaderComponent implements OnInit {
   iconTitle: string;
   @Input()
   helpTitle: string;
-  constructor() { }
+  socialLinks;
+  cartCounter;
+  @Input()
+  userStatusColor;
+  constructor(private env: EnviromentService) {
+      this.socialLinks = env.getLink();
+   }
 
   ngOnInit() {
+    this.cartCounter= 8;
+
   }
 
 }

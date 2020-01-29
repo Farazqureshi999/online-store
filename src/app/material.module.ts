@@ -111,8 +111,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class MaterialModule {
   constructor(iconRegistery: MatIconRegistry, sanitizer: DomSanitizer) {
-        iconRegistery.addSvgIcon('fb', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/fb.svg'));
-        iconRegistery.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/linkedin.svg'));
-        iconRegistery.addSvgIcon('git', sanitizer.bypassSecurityTrustResourceUrl('assets/icons/github.svg'));
+        iconRegistery.addSvgIcon('fb', sanitizer.bypassSecurityTrustResourceUrl('./../assets/icon/fb.svg'));
+        iconRegistery.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('./../assets/icon/linkedin.svg'));
+        iconRegistery.addSvgIcon('git', sanitizer.bypassSecurityTrustResourceUrl('./../assets/icon/github.svg'));
   }
 }

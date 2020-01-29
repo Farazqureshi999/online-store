@@ -6,14 +6,27 @@
     <mat-icon class="example-icon">{{iconTitle}}</mat-icon>
     <span>{{pageTitle}}</span>
     <span class="example-spacer"></span>
+    <mat-icon [color]="userStatusColor" class="example-icon">account_box</mat-icon>
+    <mat-icon matBadge="{{cartCounter}}" matBadgePosition="before" matBadgeColor="accent">shopping_cart</mat-icon>
     <mat-icon class="example-icon icon-menu" [matMenuTriggerFor]="helpmenu" matTooltip="Help">live_help</mat-icon>
     <mat-icon class="example-icon" matTooltip="Email">email</mat-icon>
-    <mat-icon class="example-icon" matTooltip="more">more_vert</mat-icon>
+    <mat-icon class="example-icon" matTooltip="more" [matMenuTriggerFor]="moremenu">person</mat-icon>
 
     <mat-menu #helpmenu="matMenu">
       {{helpTitle}}
     </mat-menu>
-    <mat-menu #dashmenu="matMenu">
+    <mat-menu #moremenu="matMenu">
+      <a [href]="socialLinks.fblink" target="_blank" style="text-decoration: none ;">
+        <button mat-menu-item><mat-icon svgIcon="fb" style="padding-bottom: 2px;"></mat-icon>facebook</button>
+      </a>
+      <a [href]="socialLinks.github" target="_blank" style="text-decoration: none ;">
+        <button mat-menu-item><mat-icon svgIcon="git" style="padding-bottom: 2px;"></mat-icon>github</button>
+      </a>
+      <a [href]="socialLinks.linkedin" target="_blank" style="text-decoration: none ;">
+        <button mat-menu-item><mat-icon svgIcon="linkedin" style="padding-bottom: 2px;"></mat-icon>Linkedin</button>
+      </a>
+    </mat-menu>
+      <mat-menu #dashmenu="matMenu">
       <button class="mat-menu-item"><mat-icon matTooltip="Dashboard">dashboard</mat-icon>Dashboard</button>
       <button class="mat-menu-item"><mat-icon matTooltip="Email">email</mat-icon>Email</button>
       <button class="mat-menu-item"><mat-icon matTooltip="Info">info</mat-icon>About</button>
