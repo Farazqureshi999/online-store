@@ -9,6 +9,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+import { SettingComponent } from './components/setting/setting.component';
+import { SetproductComponent } from './admin/setproduct/setproduct.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    AboutComponent,
+    SettingComponent,
+    SetproductComponent
   ],
   imports: [
     BrowserModule,

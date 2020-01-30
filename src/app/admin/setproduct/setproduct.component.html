@@ -1,0 +1,22 @@
+<app-header [pageTitle]="'Add Product'" [iconTitle]="'add_circle'" [helpTitle]="'Add product Help'" [userStatusColor]="'warn'"></app-header>
+<mat-card>
+  <mat-card-content>
+    <div
+      *ngIf="(toggleField == 'searchMode') else (toggleField == 'addMode')? showAddMode : ((toggleField == 'editMode')? showEditMode : showResMode) ">
+
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #showAddMode>
+
+</ng-template>
+
+<ng-template #showEditMode>
+edit item
+</ng-template>
+
+
+<ng-template #showResMode>
+show results
+</ng-template>

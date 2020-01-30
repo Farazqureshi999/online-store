@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.cartCounter= 8;
+    this.cartCounter = 8;
 
   }
 

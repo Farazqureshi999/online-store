@@ -27,9 +27,9 @@
       </a>
     </mat-menu>
       <mat-menu #dashmenu="matMenu">
-      <button class="mat-menu-item"><mat-icon matTooltip="Dashboard">dashboard</mat-icon>Dashboard</button>
-      <button class="mat-menu-item"><mat-icon matTooltip="Email">email</mat-icon>Email</button>
-      <button class="mat-menu-item"><mat-icon matTooltip="Info">info</mat-icon>About</button>
-      <button class="mat-menu-item"><mat-icon matTooltip="Settings">settings_applications</mat-icon>Settings</button>
+      <button class="mat-menu-item" [routerLink]="['/home']" ><mat-icon matTooltip="Dashboard">dashboard</mat-icon>Dashboard</button>
+      <button class="mat-menu-item" [routerLink]="['/contact']" ><mat-icon matTooltip="Email">email</mat-icon>Email</button>
+      <button class="mat-menu-item" [routerLink]="['/about']" ><mat-icon matTooltip="Info">info</mat-icon>About</button>
+      <button class="mat-menu-item" [routerLink]="['/setting']" ><mat-icon matTooltip="Settings">settings_applications</mat-icon>Settings</button>
     </mat-menu>
   </mat-toolbar-row>
