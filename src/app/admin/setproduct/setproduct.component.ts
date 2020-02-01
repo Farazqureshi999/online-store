@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetproductComponent implements OnInit {
   toggleField: string;
+  savedChanges = false;
   constructor() { }
 
   ngOnInit() {
@@ -20,5 +21,17 @@ export class SetproductComponent implements OnInit {
         filter = filter;
     }
     this.toggleField = filter;
+  }
+
+  getFilterData() {
+
+  }
+
+  getData() {
+
+  }
+
+  setData() {
+
   }
 }
